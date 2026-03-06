@@ -1,0 +1,115 @@
+>summary(m1)
+
+Call:
+lm(formula = Pelagibacterales_MAG_18 ~ Salinity + Temperature + 
+    Season_num, data = reg_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-5.3509 -1.3958 -0.4276  1.5456  3.4558 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  5.98006    2.03675   2.936  0.00742 ** 
+Salinity     0.27055    0.03875   6.982 4.07e-07 ***
+Temperature -0.07532    0.21423  -0.352  0.72835    
+Season_num  -2.72030    4.02517  -0.676  0.50589    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.044 on 23 degrees of freedom
+Multiple R-squared:  0.8171,	Adjusted R-squared:  0.7933 
+F-statistic: 34.25 on 3 and 23 DF,  p-value: 1.179e-08
+
+> summary(m2)
+
+Call:
+lm(formula = Nanopelagicales_MAG_18 ~ Salinity + Temperature + 
+    Season_num, data = reg_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3.4697 -0.7902  0.4622  1.4731  2.9315 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  9.32666    1.90061   4.907 5.87e-05 ***
+Salinity    -0.34876    0.03616  -9.645 1.50e-09 ***
+Temperature  0.15408    0.19991   0.771    0.449    
+Season_num  -4.72326    3.75612  -1.257    0.221    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.907 on 23 degrees of freedom
+Multiple R-squared:  0.8145,	Adjusted R-squared:  0.7903 
+F-statistic: 33.67 on 3 and 23 DF,  p-value: 1.384e-08
+
+> summary(m3)
+
+Call:
+lm(formula = Flavobacteriales_MAG_6 ~ Salinity + Temperature + 
+    Season_num, data = reg_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.3486 -0.6644 -0.3553 -0.1256  4.0869 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 10.93649    1.58130   6.916 4.74e-07 ***
+Salinity     0.01574    0.03008   0.523    0.606    
+Temperature -0.27892    0.16633  -1.677    0.107    
+Season_num  -3.27230    3.12507  -1.047    0.306    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.587 on 23 degrees of freedom
+Multiple R-squared:  0.8794,	Adjusted R-squared:  0.8637 
+F-statistic: 55.92 on 3 and 23 DF,  p-value: 1.013e-10
+
+
+> summary(m4)
+
+Call:
+lm(formula = Rhodobacterales_MAG_15 ~ Salinity + Temperature + 
+    Season_num, data = reg_df)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-6.453 -1.201  0.610  1.440  4.072 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  8.30725    2.55816   3.247 0.003552 ** 
+Salinity     0.19786    0.04867   4.066 0.000478 ***
+Temperature -0.45759    0.26908  -1.701 0.102506    
+Season_num   5.04452    5.05562   0.998 0.328757    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.567 on 23 degrees of freedom
+Multiple R-squared:  0.6554,	Adjusted R-squared:  0.6104 
+F-statistic: 14.58 on 3 and 23 DF,  p-value: 1.56e-05
+
+> summary(m5)
+
+Call:
+lm(formula = Pelagibacterales_MAG_18 ~ Salinity * Temperature, 
+    data = reg_df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.9813 -1.0385 -0.0765  1.0594  4.4492 
+
+Coefficients:
+                     Estimate Std. Error t value Pr(>|t|)    
+(Intercept)          15.13276    3.36152   4.502 0.000161 ***
+Salinity             -0.08114    0.13683  -0.593 0.558950    
+Temperature          -0.55241    0.13469  -4.101 0.000437 ***
+Salinity:Temperature  0.01481    0.00563   2.631 0.014933 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.809 on 23 degrees of freedom
+Multiple R-squared:  0.8566,	Adjusted R-squared:  0.8379 
+F-statistic: 45.81 on 3 and 23 DF,  p-value: 7.328e-10
