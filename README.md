@@ -79,13 +79,13 @@ microbiome_stats/
 │   └── README.md
 │
 ├── day7/                          # Full workflow synthesis
-│   ├── day7_full_workflow.R
+│   ├── day7_correlation_mantel.R
 │   └── README.md
 │
 └── README.md                      # This file
 ```
 
----
+## **All days do have the results and figures**
 
 ## The 7-Day Series
 
@@ -114,7 +114,7 @@ Runs the first real analysis: RDA with Hellinger-transformed MAG abundance data 
 ### 📅 Day 3
 
 **PERMANOVA with adonis2 — Testing Real Community Differences**
-
+📖 [Blog](https://jojyjohn28.github.io/blog/day3-permanova-adonis2-microbiome/)
 The natural follow-up to ordination: we've _seen_ communities separate visually — now we formally test whether those differences are statistically real. Covers single-factor and multi-factor PERMANOVA models (Season, Bay, SF and their interactions), the critical homogeneity of dispersion assumption (`betadisper`), and correct interpretation of R² vs p-value.
 
 **R functions:** `adonis2()`, `betadisper()`, `permutest()`, `pairwiseAdonis()`  
@@ -125,6 +125,7 @@ The natural follow-up to ordination: we've _seen_ communities separate visually 
 ### 📅 Day 4
 
 **Non-Parametric Tests — Wilcoxon, Kruskal-Wallis & Effect Sizes**
+📖 [Blog](https://jojyjohn28.github.io/blog/day4-nonparametric-tests-wilcoxon-kruskal-wallis/)
 
 Stepping back from community-level to taxon-level comparisons. Covers when to use Wilcoxon rank-sum vs Kruskal-Wallis, multiple testing correction (FDR/BH), Cliff's delta as effect size, and critically — when NOT to use a t-test on microbiome abundance data. Applied to real comparisons: Chesapeake vs Delaware, Spring vs Summer, Particle-attached vs Free-living.
 
@@ -136,6 +137,7 @@ Stepping back from community-level to taxon-level comparisons. Covers when to us
 ### 📅 Day 5
 
 **Multiple Regression — Linking MAG Abundance to Environment**
+📖 [Blog](https://jojyjohn28.github.io/blog/day5-multiple-regression-mag-abundance/)
 
 Bridges community-level ecology to individual MAG/gene abundance. Covers linear models for MAG abundance as a function of environmental variables, interaction terms (Salinity × Season), model diagnostics (residual plots, QQ plots, Cook's distance), and biological interpretation of regression coefficients. Uses the same MAG × metadata dataset.
 
@@ -147,6 +149,7 @@ Bridges community-level ecology to individual MAG/gene abundance. Covers linear 
 ### 📅 Day 6
 
 **WGCNA — From Individual MAGs to Co-Abundance Network Modules**
+📖 [Blog](https://jojyjohn28.github.io/blog/day6-wgcna-mag-coabundance-networks/)
 
 The advanced day — stops asking "which MAG?" and starts asking "which module of co-occurring MAGs?". Covers WGCNA adapted for MAG co-abundance (not gene expression), soft threshold selection, module detection, relating module eigengenes to environmental traits, and visualizing the trait-module heatmap. This application of WGCNA to MAG co-abundance is underrepresented in the literature.
 
@@ -157,7 +160,20 @@ The advanced day — stops asking "which MAG?" and starts asking "which module o
 
 ### 📅 Day 7
 
+**Correlation Analysis & Mantel Test — Linking MAGs to Environmental Gradients**
+📖 [Blog](https://jojyjohn28.github.io/blog/day7-correlation-mantel-test-microbiome/)
+
+Two methods that answer what PERMANOVA and Wilcoxon cannot: which specific environmental variable does each MAG track continuously, and does community dissimilarity itself scale with environmental dissimilarity across all sample pairs? Covers Spearman correlation (why not Pearson on skewed data), BH correction across 549 MAG–env tests, the env–env collinearity heatmap as a prerequisite step, and the Mantel test on distance matrices — including partial Mantel to isolate salinity from temperature.
+
+**R functions**: rcorr(), ggcorrplot(), vegdist(), mantel(), mantel.partial()
+**Key packages**: Hmisc, ggcorrplot, vegan
+
+---
+
+### 📅 Day 8
+
 **From Raw Data to Paper Figures — A Complete Workflow**
+[Blog](https://jojyjohn28.github.io/blog/day8-complete-microbiome-stats-workflow/)
 
 The synthesis post. Walks through the complete analysis pipeline from raw MAG abundance + metadata through ordination → PERMANOVA → differential abundance → regression → network — showing how each method answers a different biological question and how they fit together into a results section. Includes the Mantel test (distance-environment correlation) and a reusable analysis checklist.
 
@@ -232,4 +248,6 @@ A 7-Day Practical Series. GitHub: github.com/jojyjohn28/microbiome_stats
 ---
 
 Ongoing
-Last updated March 3
+last Upadted on March 11, 2026.
+This series is completed.
+Thank you for reading and visiting this repo.
